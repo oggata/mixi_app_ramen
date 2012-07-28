@@ -1,0 +1,69 @@
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
+<table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>ラーメンの作り方</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF9900">★「仕入」する</td>
+  </tr>
+  <tr>
+    <td>１．まず調理するための<span class="style1">皿やスープ</span>、<span class="style1">具材</span>を「仕入」しましょう。<br>
+      ２．「仕入」タブから必要なアイテムを選択して下さい。<br>
+    ※所持金より高いアイテムは選択できません。また自分のレベルよりも高いレベルのアイテムは選択できません。<br>    <img src="/jpg/shiire.png" width="305" height="143"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF9900">★「調理」する</td>
+  </tr>
+  <tr>
+    <td>１．「調理」タブから<br>
+    「<span class="style1">新しいラーメンのレシピを作る</span>」を選択します。</td>
+  </tr>
+  <tr>
+    <td>２．新しく空のメニューが作成されるので、<br>
+    メニュー下部にある「調理する」ボタンを押します。<br>
+    <img src="/jpg/help_img_tyoriba.png" width="158" height="284"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF">３．「組み合わせ」の中から、<span class="style1">皿、スープ、麺、具<br>
+  の順番</span>でラーメンを作っていきます。<br>
+      皿がない状態で、スープや麺は入れられませんので<br>
+    注意して下さい。<br>
+    <img src="/jpg/help_img_tyoriba2.png" width="158" height="284"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>４．「仕入」で購入したアイテムを選んで組み合わせます<img src="/jpg/help_img_tyoriba3.png" width="176" height="226"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>５．トッピングの順番は、<span class="style1">下にいけばいくほど、ラーメンの上に重ねてトッピング</span>されます。見栄えを整える為に、一度配置したアイテムも「▲」「▼」<br>
+      を押すことで、重ねる順番を変更することができます。<br>
+    綺麗に配置しましょう。</td>
+  </tr>
+  <tr>
+    <td><img src="/jpg/help_img_tyoriba4.png" width="259" height="186"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>

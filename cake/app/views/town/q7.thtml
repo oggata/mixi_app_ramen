@@ -1,0 +1,26 @@
+<form action="/cake/town/make_town/" name="form" method="post">
+<table width="310" border="0" bgcolor="#FFFFFF">
+  <tr>
+    <td bgcolor="#339999">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>■下記からあなたが必須だと思う具を１個ー３個<br>
+      選んでください。<br>
+
+<?php $data_cnt = 1;?>
+<?php foreach($data as $datas): ?>
+      <input type="checkbox" name="data[answer_7][<?php echo $datas['parent_material']['parent_material_code']?>]" value="<?php echo $datas['parent_material']['parent_material_code']?>">
+<?php echo $datas['parent_material']['parent_material_name']?>
+<?php $data_cnt = $data_cnt + 1;?>
+<?php endforeach; ?>
+      <p></p>
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="Submit2" value="次へ"></td>
+  </tr>
+  <tr>
+    <td height="259">&nbsp;</td>
+  </tr>
+</table>
+</form>

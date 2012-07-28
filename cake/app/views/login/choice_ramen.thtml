@@ -1,0 +1,21 @@
+<table width="315" height="210" border="1">
+  <tr>
+    <td><form name="form1" method="post" action="/cake/login/create_user_execute/">
+さて
+まずは君の好きなラーメンについて教えて欲しい。
+出身地とラーメンを選択してくれ
+
+１．出身地
+
+
+２．スープ
+
+
+３．麺
+
+
+４．好きな具材
+      <input type="submit" name="Submit" value="送信">
+    </form></td>
+  </tr>
+</table>

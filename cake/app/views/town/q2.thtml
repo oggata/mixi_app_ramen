@@ -1,0 +1,24 @@
+<form action="/cake/town/q3/" name="form" method="post">
+<table width="310" height="337" border="0" bgcolor="#FFFFFF">
+  <tr>
+    <td height="15" bgcolor="#339999">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="148"><br>
+      ■ラーメン１杯の金額はどの位が妥当？<br>
+      <input name="data[answer_2]" type="radio" value="1" checked>
+      不味くても安ければ安いほど良い。（500円位）<br>
+      <input name="data[answer_2]" type="radio" value="2">まぁ全国このくらいの値段じゃない？800円位<br>
+      <input name="data[answer_2]" type="radio" value="3">まぁ全国このくらいの値段じゃない？1000円位<br>
+      <input name="data[answer_2]" type="radio" value="4">高くても美味しいものが食べれれば良い1200円位<br>
+      <input name="data[answer_2]" type="radio" value="5">高級食材をふんだんに使った美味しいものが食べたい（1500円以上）
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td height="26"><input type="submit" name="Submit2" value="次へ"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</form>

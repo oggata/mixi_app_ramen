@@ -1,0 +1,121 @@
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
+<table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#FF6600">ストーリー</td>
+  </tr>
+  <tr>
+    <td><img src="/jpg/help_img1.png" width="300" height="200"><br>
+      <a href="/cake/top/invite">日本</a>で最初にラーメンを食べたのは徳川光圀であるとする説がある。
+この説が正しいか否かは分らないが、「ラーメン」は日本に入って以来日本独自の進化を遂げ、現代でも人気のある食品のひとつになった。<br>
+その進化には、「<span class="style1">伝説の屋台</span>」の努力があったことはあまり知られていない。<br>
+この物語は「<span class="style1">伝説の１杯</span>」を追い求め、ラーメン修行に明け暮れた人々の物語である・・。
+<br></td>
+  </tr>
+  <tr>
+    <td>・<a href="/cake/top/help2/">ラーメンの作り方を見る＞＞</a></td>
+  </tr>
+  <tr>
+    <td>・<a href="/cake/top/qanda/">QandAに進む＞＞</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF6600">ゲームの目的</td>
+  </tr>
+  <tr>
+    <td>このゲームの目的は<span class="style1">ミクシーのユーザー達の町々</span>を巡り、おいしいラーメンを提供することです。<br>
+      ラーメンを販売した皿の数で競います。<br>    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF6600">ゲームの進行</td>
+  </tr>
+  <tr>
+    <td>材料を買い、お店独自の<span class="style1">ラーメンを作成</span>する<br>
+      ↓<br>
+      サイコロを振り、町に屋台を開く<br>
+      ↓<br>
+      <span class="style1">１時間、止まった場所でラーメンを販売</span>する（１時間待つ）<br>
+      ↓<br>
+      食べた人の意見を聞き、ラーメンを作り直す<br>
+      ↓<br>
+    サイコロを振り、町に屋台を開く</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF6600">経験値（ＥＸＰ）</td>
+  </tr>
+  <tr>
+    <td>      経験値は下記の２つの場合、与えられます。<br>
+      １．屋台が<span class="style1">青いマス（ＥＸＰ）</span>に止まったとき<br>
+      <img src="/jpg/exp.png" width="40" height="40">      <br>
+      ２．提供したラーメンの<span class="style1">満足度が８０点</span>を越えたとき<br>
+      <img src="/jpg/help_img_hyoka.png" width="255" height="51">      <br>
+      <p>経験値をためると、下記のような効能があります。<br>
+        １．一定以上経験値をためるとレベルアップ<br>
+        初心者(lv.1～lv.5)<br>
+        見習い(lv.6～lv.10)<br>
+        駆け出し(lv.11～lv.15)<br>
+        修行中(lv.16～lv.20)<br>
+        半人前(lv.21～lv.25)<br>
+        一人前(lv.26～lv.30)<br>
+        腕利き(lv.31～lv.35)        <br>
+        凄腕(lv.31～lv.35)<br>
+        玄人(lv.31～lv.35)        <br>
+        鉄人(lv.36～lv.40)        ・・・続く
+        <br>
+        <br>
+    ２．経験値が上昇すると<br>
+    <span class="style1">一度に販売できるラーメンの数</span>が上昇します。<br>
+    １日あたりの販売数を伸ばす為にも経験値を貯めましょう。<br>
+      </p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF6600">お金（ＭＯＮＥＹ）</td>
+  </tr>
+  <tr>
+    <td>お金は下記の２つの場合、与えられます。<br>
+      １．屋台が青いマス（ＭＯＮＥＹ）に止まったとき<br>
+      <img src="/jpg/money.png" width="40" height="40"><br>
+      ２．１日の販売数を決算したとき、販売したラーメンの数によって得られます。<br>
+      （毎日午前４：００頃）
+      <p>お金は<span class="style1">新しい食材を仕入れる</span>ときに必要です。<br>
+    </p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF6600">ラーメン作成のコツ-</td>
+  </tr>
+  <tr>
+    <td>      ミクシーの友達たちは、それぞれ好みがあり、<br>
+      あらゆるテイストのラーメンを欲しています。<br>
+      <span class="style1">町の人の声を注意深く聞き</span>、どんなラーメンを食べたいのか、
+    考える必要があります。<br>
+    <img src="/jpg/help_img_hyoka_list.png" width="203" height="193">    <br></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF6600">自分の町をつくる</td>
+  </tr>
+  <tr>
+    <td>      屋台が回ってくる「自分の町」を作ることができます。<br>
+      自分の町を作ることで、この町に色々な友達の屋台が<br>
+    まわって来て、あなたの望むラーメンを作ってくれます。<br></td>
+  </tr>
+</table>

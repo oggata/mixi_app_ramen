@@ -1,0 +1,1 @@
+<a href="/cake/top/top/"><img src="/jpg/ramen_title.png" width="310" height="100" border:"0" margin:"0" padding:"0"></a>

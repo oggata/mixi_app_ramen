@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="Hello">
+<Require feature="flash" />
+</ModulePrefs>
+<Content type="html"><![CDATA[
+
+----------------------------------------------
+
+
+<link rel="stylesheet" href="http://mixiapp.blamestitch.com/css/sorter/style.css" />
+<script type="text/javascript" src="http://mixiapp.blamestitch.com/js/sorter/script.js"></script>
+<script type="text/javascript" src="http://mixiapp.blamestitch.com/js/mouseover.js"></script>
+
+
+
+----------------------------------------------
+
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('mixiapp_header_on_r1_c1.jpg','mixiapp_header_on_r1_c2.jpg','mixiapp_header_on_r1_c3.jpg')">
+<table border="0" cellpadding="0" cellspacing="0" width="945">
+<!-- fwtable fwsrc="http://mixiapp.blamestitch.com/jpg/mixiapp_header.png" fwbase="mixiapp_header.jpg" fwstyle="Dreamweaver" fwdocid = "369629659" fwnested="0" -->
+  <tr>
+   <td><img src="http://mixiapp.blamestitch.com/jpg/spacer.gif" width="90" height="1" border="0" alt=""></td>
+   <td><img src="http://mixiapp.blamestitch.com/jpg/spacer.gif" width="87" height="1" border="0" alt=""></td>
+   <td><img src="http://mixiapp.blamestitch.com/jpg/spacer.gif" width="100" height="1" border="0" alt=""></td>
+   <td><img src="http://mixiapp.blamestitch.com/jpg/spacer.gif" width="668" height="1" border="0" alt=""></td>
+   <td><img src="http://mixiapp.blamestitch.com/jpg/spacer.gif" width="1" height="1" border="0" alt=""></td>
+  </tr>
+
+  <tr>
+   <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','http://mixiapp.blamestitch.com/jpg/mixiapp_header_on_r1_c1.jpg',1)"><img src="http://mixiapp.blamestitch.com/jpg/mixiapp_header_r1_c1.jpg" name="Image11" width="90" height="30" border="0"></a></td>
+   <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','http://mixiapp.blamestitch.com/jpg/mixiapp_header_on_r1_c2.jpg',1)"><img src="http://mixiapp.blamestitch.com/jpg/mixiapp_header_r1_c2.jpg" name="Image12" width="87" height="30" border="0"></a></td>
+   <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','http://mixiapp.blamestitch.com/jpg/mixiapp_header_on_r1_c3.jpg',1)"><img src="http://mixiapp.blamestitch.com/jpg/mixiapp_header_r1_c3.jpg" name="Image13" width="100" height="30" border="0"></a></td>
+   <td><img name="mixiapp_header_r1_c4" src="http://mixiapp.blamestitch.com/jpg/mixiapp_header_r1_c4.jpg" width="668" height="30" border="0" alt=""></td>
+   <td><img src="http://mixiapp.blamestitch.com/jpg/spacer.gif" width="1" height="30" border="0" alt=""></td>
+  </tr>
+</table>
+</body>
+
+
+
+
+
+
+----------------------------------------------
+
+
+
+
+
+
+<div id="controls">
+	<div id="perpage">
+		<select onchange="sorter.size(this.value)">
+			<option value="5">5</option>
+				<option value="10" selected="selected">10</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+			<span>Entries Per Page</span>
+		</div>
+		<div id="navigation">
+			<img src="http://mixiapp.blamestitch.com/images/sorter/first.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1,true)" />
+			<img src="http://mixiapp.blamestitch.com/images/sorter/previous.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1)" />
+			<img src="http://mixiapp.blamestitch.com/images/sorter/next.gif" width="16" height="16" alt="First Page" onclick="sorter.move(1)" />
+			<img src="http://mixiapp.blamestitch.com/images/sorter/last.gif" width="16" height="16" alt="Last Page" onclick="sorter.move(1,true)" />
+		</div>
+		<div id="text">Displaying Page <span id="currentpage"></span> of <span id="pagelimit"></span></div>
+	</div>
+	
+<script type="text/javascript">
+  	var sorter = new TINY.table.sorter("sorter");
+	sorter.head = "head";
+	sorter.asc = "asc";
+	sorter.desc = "desc";
+	sorter.even = "evenrow";
+	sorter.odd = "oddrow";
+	sorter.evensel = "evenselected";
+	sorter.oddsel = "oddselected";
+	sorter.paginate = true;
+	sorter.currentid = "currentpage";
+	sorter.limitid = "pagelimit";
+	sorter.init("table",1);
+</script>
+
+
+
+<div id="datalist"></div>
+----------------------------------------------
+
+
+
+<script type="text/javascript">
+
+		var url = "http://mixiapp.blamestitch.com/ufo/returnxml";
+		var params = {};
+		//params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.POST;
+
+		//期待するコンテンツは XML ファイル
+		params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.XML;
+
+		//署名は付与しない NONE
+		params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.NONE;
+
+		gadgets.io.makeRequest(url, function(response) {
+
+			var theString = response.data;
+			
+			var parser = new DOMParser();
+			var dom = parser.parseFromString(theString, "text/xml");
+			var scores = dom.getElementsByTagName("score");
+
+
+			//tableタグを作成
+			html  = '';
+			html += '<table width="500" border="0" id="table" class="sortable"><thead><tr>';
+			html += '<th width="30" class="nosort">ランク</th><th width="100">名前</th><th width="50">最大得点</th><th width="50">累計得点</th><th width="50">挑戦回数</th>';
+			html += '</tr></thead><tbody>';
+			
+			for (var i=0; i<scores.length; i++){
+				html += '<tr><td>&nbsp;</td>';
+        		//console.log(scores[i].getElementsByTagName("mixi_account_name")[0].textContent);
+        		html += '<td>' + scores[i].getElementsByTagName("mixi_account_name")[0].textContent + '</td>';
+        		html += '<td>' + scores[i].getElementsByTagName("max_count")[0].textContent + '</td>';
+        		html += '<td>' + scores[i].getElementsByTagName("all_count")[0].textContent + '</td>';
+        		html += '<td>' + scores[i].getElementsByTagName("game_count")[0].textContent + '</td>';
+          		html += '</tr>';
+ 			}	
+
+			html += '</tbody></table>';
+
+			
+			//divを置き換え
+			document.getElementById("datalist").innerHTML = html;
+
+
+
+		}, params);
+		
+		
+		
+
+
+</script>
+
+
+
+]]></Content>
+</Module>

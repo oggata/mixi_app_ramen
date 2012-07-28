@@ -1,0 +1,9 @@
+<table width="315" height="210" border="1">
+  <tr>
+    <td><form name="form1" method="post" action="/cake/login/create_user_execute/">
+ふむ、分った。
+それでは君の屋台はさっそく用意したので、日本一のラーメンを目指してがんばってくれ
+      <input type="submit" name="Submit" value="送信">
+    </form></td>
+  </tr>
+</table>

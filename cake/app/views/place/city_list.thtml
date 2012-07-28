@@ -1,0 +1,21 @@
+<table width="315" border="0">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><a href="/cake/place/place_list/">都道府県リスト</a>＞<?php echo $prefecture_name;?></td>
+  </tr>
+  <tr>
+    <td><?php echo $vlist;?></td>
+  </tr>
+  <tr>
+    <td><table width="315" border="0" bgcolor="#FFFFFF">
+<?php foreach($data as $datas): ?>
+  <tr>
+    <td width="86"><img src="/img/fuda/<?php echo $datas[0]['m_city_code'];?>.jpg" width="80" height="30"></td>
+    <td width="219"><?php echo $datas[0]['m_city_name'];?></td>
+  </tr>
+<?php endforeach; ?>
+</table></td>
+  </tr>
+</table>

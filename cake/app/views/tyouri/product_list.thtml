@@ -1,0 +1,82 @@
+<style type="text/css">
+<!--
+.style1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+-->
+</style>
+<table width="310" height="67" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#FF6600"><span class="style1">調理場
+
+    </span></td>
+  </tr>
+  <tr>
+    <td>調理場では「お店」で仕入た<br>
+食材を組み合わせてラーメンを作ることができます。
+  <p><a href="/cake/top/help2/">&gt;ラーメンの作り方を見る</a><br>
+      <br>
+      <a href="/cake/shop/top/">&gt;食材を仕入に行く </a><br>
+      <br>
+      <a href="/cake/tyouri/create_new_product/">&gt;新しいラーメンのレシピを作る</a></p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#FF6600" class="style1">レシピ一覧</td>
+  </tr>
+</table>
+<table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><?php echo $vlist;?></td>
+  </tr>
+</table>
+<table width="310" border="0" bordercolor="#333333" bgcolor="#FFFFFF" class="table-01" cellpadding="0" cellspacing="0">
+  <tr>
+<?php $q = 1;?>
+<?php foreach($data as $datas): ?>
+    <td width="111"><img src="/top_img/top/<?php echo $datas['product']['member_code'];?>/<?php echo $datas['product']['product_code'];?>.png?<?php echo $time_txt;?>" width="99" height="110"><br>
+      <table width="100" border="0" bordercolor="#666666" >
+        <tr>
+          <td width="115" bgcolor="#CCCCCC">値段</td>
+        </tr>
+        <tr>
+          <td><?php echo $datas['product']['product_price'];?>銭</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">スープ</td>
+        </tr>
+        <tr>
+          <td height="21"><?php echo $datas['product']['c_2_name'];?></td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">麺</td>
+        </tr>
+        <tr>
+          <td><?php echo $datas['product']['c_3_name'];?></td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">こってり度</td>
+        </tr>
+        <tr>
+          <td><span class="StarColor"><?php for($i=0;$i<$datas['product']['product_kotteri_point'];$i++){echo '★';}?>(<?php echo $datas['product']['product_kotteri_point'];?>)</span></td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">ボリューム</td>
+        </tr>
+        <tr>
+          <td><span class="StarColor"><?php for($i=0;$i<$datas['product']['product_volume_point'];$i++){echo '★';}?>(<?php echo $datas['product']['product_volume_point'];?>)</span></td>
+        </tr>
+      </table>
+    <a href="/cake/tyouri/detail/<?php echo $datas['product']['product_code']?>"><img src="/jpg/tyouri.png" width="97" height="26"></a></td>
+    <?php if($q%3==0){ ?></tr><tr><?php } ?>
+
+<?php $q = $q + 1;?>
+<?php endforeach; ?>
+
+</tr>
+</table>

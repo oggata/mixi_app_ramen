@@ -1,0 +1,23 @@
+<table width="315" height="210" border="1">
+  <tr>
+    <td><form name="form1" method="post" action="/cake/login/create_user_confrim/">
+
+伝説の一杯
+
+ラーメンが日本に伝わってから約２００年。
+
+その歳月と共にラーメンは進化してきた。
+
+そしてラーメン職人は、至極の逸品を求めて
+
+日々歳月を費やしてきたのである。
+
+この物語は一人のラーメン職人の魂を込めた伝説の
+
+一杯を探す旅の物語である。
+
+
+      <input type="submit" name="Submit" value="送信">
+    </form></td>
+  </tr>
+</table>

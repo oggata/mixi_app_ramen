@@ -1,0 +1,36 @@
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/js/validator.js"></script>
+<link rel="stylesheet" href="/css/default.css" type="text/css">
+<form action="/cake/login/m_execute/" name="form" method="post" onSubmit="return Validator.submit(this)">
+<table width="750" height="313" border="0">
+  <tr>
+    <td height="5"><img src="/jpg/spacer.gif" width="57" height="47"></td>
+  </tr>
+  <tr>
+    <td height="15" class="help_category"><H1>ログインページ</H1></td>
+  </tr>
+  <tr>
+    <td height="18" class="help_contents">まだ会員になっていない方は<a href="/cake/member/account/">新規会員登録（無料）</a>より登録を行なって下さい。</td>
+  </tr>
+  <tr>
+    <td height="82"><table width="500" border="0" id="table-01">
+      <tr>
+        <th width="73">ログインID</th>
+        <td width="417"><input name="data[e_mail]" type="text" size="40" onblur="Validator.check(this, 'mail')"></td>
+      </tr>
+      <tr>
+        <th>パスワード</th>
+        <td><input type="password" name="data[member_password]"  onblur="Validator.check(this)"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="2"><input type="submit" name="Submit" value="ログインする"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</form>
+
+

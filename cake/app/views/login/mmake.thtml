@@ -1,0 +1,17 @@
+
+<a href="/cake/login/mlogin">login
+</a>
+<form action="/cake/login/mmake_execute/" name="form" method="post">
+<table width="315" border="1">
+  <tr>
+    <td bgcolor="#CCCCCC">account</td>
+    <td><input type="text" name="data[account_code]"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC">名前</td>
+    <td><input type="text" name="data[name]"></td>
+  </tr>
+</table>
+<input type="submit" name="Submit" value="送信">
+
+</form>

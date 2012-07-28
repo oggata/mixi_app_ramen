@@ -1,0 +1,124 @@
+<style type="text/css">
+<!--
+body{
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #000000;
+  border:0px;
+  margin:0px;
+  padding:0px;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.style4 {font-size: 12px}
+.style5 {color: #FF0000}
+body {
+  background-color: #EEEEFA;
+}
+-->
+</style>
+<form name="form" method="post" action="http://ramens.blamestitch.com/cake/login/mixi_login/">
+<table border="0" cellpadding="0" cellspacing="0" width="310">
+<!-- fwtable fwsrc="/jpg/topimg.png" fwbase="topimg.gif" fwstyle="Dreamweaver" fwdocid = "2106209336" fwnested="0" -->
+  <tr>
+   <td><img src="/jpg/spacer.gif" width="77" height="1" border="0" alt=""></td>
+   <td><img src="/jpg/spacer.gif" width="165" height="1" border="0" alt=""></td>
+   <td><img src="/jpg/spacer.gif" width="68" height="1" border="0" alt=""></td>
+   <td><img src="/jpg/spacer.gif" width="1" height="1" border="0" alt=""></td>
+  </tr>
+
+  <tr>
+   <td colspan="3"><img name="topimg_r1_c1" src="/jpg/topimg_r1_c1.gif" width="310" height="345" border="0" alt=""></td>
+   <td><img src="/jpg/spacer.gif" width="1" height="345" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td rowspan="2"><img name="topimg_r2_c1" src="/jpg/topimg_r2_c1.gif" width="77" height="105" border="0" alt=""></td>
+   <td background="/jpg/topimg_r2_c2.gif"><div align="center">
+     <input type="submit" name="Submit" value="屋台出動" style="WIDTH: 100px; HEIGHT:50px">
+   </div></td>
+   <td rowspan="2"><img name="topimg_r2_c3" src="/jpg/topimg_r2_c3.gif" width="68" height="105" border="0" alt=""></td>
+   <td><img src="/jpg/spacer.gif" width="1" height="50" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td><img name="topimg_r3_c2" src="/jpg/topimg_r3_c2.gif" width="165" height="55" border="0" alt=""></td>
+   <td><img src="/jpg/spacer.gif" width="1" height="55" border="0" alt=""></td>
+  </tr>
+</table>
+<div id="div_str_id"></div>
+<div id="div_str_name"></div>
+<div id="div_str_thumbnail"></div>
+<input type="hidden" name="pc_flag" value="0" />
+<input type="hidden" name="f_flag" value="0" />
+</form>
+<script type="text/javascript" charset="UTF-8" src="http://static.mixi.jp/js/application/touch.js"></script>
+<script type="text/javascript">
+
+  var oSearch = new CLocationSearch(location.search);
+
+  /* window.alert(oSearch.item('opensocial_owner_id'));*/
+  var str_id = '<input type="hidden" name="id" value="' + oSearch.item('opensocial_owner_id') + '" />';
+  document.getElementById("div_str_id").innerHTML = str_id;
+  var str_name = '<input type="hidden" name="name" value="" />';
+  document.getElementById("div_str_name").innerHTML = str_name;
+  var str_thumbnail = '<input type="hidden" name="thumbnail" value="" />';
+  document.getElementById("div_str_thumbnail").innerHTML = str_thumbnail;
+
+  function CLocationSearch(sSource) {
+
+    /* 初期化処理 */
+    var sAry = new Array();	/* アイテム配列を追加 */
+    {
+      var nCur = 0, nRet = 0;
+      var sSearch = sSource.substr(1);
+      var sName, sValue;
+
+      nRet = sSearch.indexOf('=', nCur)		// 最初の'='を検索
+      while(nRet >= 0) {
+        // '='以前が変数名
+        sName = sSearch.substring(nCur, nRet);
+        nCur = nRet + 1;
+
+        // 値を取り出す
+        nRet = sSearch.indexOf('&', nCur);	// 変数の区切りを検索
+        if (nRet == -1) nRet = sSearch.length + 1;		// なければ最後まで
+        sValue = sSearch.substring(nCur, nRet);
+
+        // 配列に格納
+        sAry[sName] = sValue;
+
+        // 次を検索
+        nCur = nRet + 1;
+        nRet = sSearch.indexOf('=', nCur);
+      }
+    }
+
+    /* 値 */
+    this.valueOf = function () {
+      return sSource;
+    }
+
+    /* 値を取り出すメソッド */
+    this.item = function (sVarname) {
+      try {
+        return sAry[sVarname];	//あれば返す
+      } catch(e) {
+        return '';				//なければ空文字を返す
+      }
+    }
+
+    /* 要素数 */
+    this.length   = function () {
+      return sAry.length;
+    }
+
+    /* toString */
+    this.toString = function () {
+      return this.length + '';
+
+    }
+  }
+</script>
+

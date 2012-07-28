@@ -1,0 +1,23 @@
+<form action="/cake/town/q5/" name="form" method="post">
+<table width="310" border="0" bgcolor="#FFFFFF">
+  <tr>
+    <td bgcolor="#339999">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><br>
+      ■あなたが望む全体的な「こってり感」について教えて下さい<br>
+      ・<input name="data[answer_4]" type="radio" value="1" checked>油っぽいラーメンは苦手。さっぱりしたものが好き。<br>
+      ・<input name="data[answer_4]" type="radio" value="2">できればさっぱりした物が食べたい<br>
+      ・<input name="data[answer_4]" type="radio" value="3">濃くもなく薄くもなくバランスよいものが食べたい<br>
+      ・<input name="data[answer_4]" type="radio" value="4">そこそこがっつりしたものが食べたい<br>
+      ・<input name="data[answer_4]" type="radio" value="5">油こってり濃いーのが好きだ。
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="Submit2" value="次へ"></td>
+  </tr>
+  <tr>
+    <td height="208">&nbsp;</td>
+  </tr>
+</table>
+</form>

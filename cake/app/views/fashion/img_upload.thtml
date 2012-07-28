@@ -1,0 +1,26 @@
+<form name="form" method="post" enctype="multipart/form-data" action="/ufo/img_upload_confirm/" onSubmit="return checkmup()">
+<table width="1101" height="359" border="0">
+  <tr>
+    <td width="80" height="255" rowspan="2" bgcolor="#FFFFFF"><img src="/cake/app/webroot/jpg/spacer80.gif" width="80" height="50"></td>
+    <td width="1011" height="120" bgcolor="#FFFFFF">      <img src="/cake/app/webroot/jpg/touroku.jpg" width="500" height="100"></td>
+    </tr>
+  <tr>
+    <td height="223" bgcolor="#FFFFFF"><table width="651" border="1" bordercolor="#999999" bgcolor="#FFFFFF" id="table-01">
+      <tr bgcolor="#FFFFFF">
+        <td colspan="3"><img src="/cake/app/webroot/jpg/upload_1.gif" width="400" height="25"></td>
+      </tr>
+      <tr>
+        <td width="103" bgcolor="#CCCCCC">画像ファイル</td>
+        <td width="532">
+          <input name='data[Example][csv]' type='file' size="50"/>
+          <br>
+          ※現在ＪＰＧ形式の画像のみ対応しております。</td>
+      </tr>
+      <tr>
+        <td colspan="3"><input name="submit" type="hidden" value="アカウント作成">
+          <input name="image" type="image" src="/cake/app/webroot/jpg/kakunin_botan.jpg"></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>

@@ -1,0 +1,178 @@
+table.table001 {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  width: 755px;
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 100%;
+}
+
+table.table001 caption {
+  margin-top: 1em;
+  text-align: left;
+}
+
+table.table001 th,
+table.table001 td {
+  padding: 4px 6px;
+}
+
+table.table001 th {
+  background: #333333;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 92%;
+  color: #FFF;
+}
+
+table.table001 td {
+  background: #E3E3E3;
+  text-align: left;
+  white-space: nowrap;
+}
+
+table.table002 {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  width: 755px;
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 100%;
+}
+
+table.table002 caption {
+  margin-top: 1em;
+  text-align: right;
+}
+
+table.table002 th,
+table.table002 td {
+  padding: 4px 6px;
+}
+
+table.table002 th {
+  background: #333333;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 92%;
+  color: #FFF;
+}
+
+table.table002 td {
+  background: #E3E3E3;
+  text-align: right;
+  white-space: nowrap;
+}
+
+
+table.table004 {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  width:755px;
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 100%;
+}
+
+table.table004 caption {
+  margin-top: 1em;
+  text-align: left;
+}
+
+table.table004 th,
+table.table004 td {
+  padding: 4px 6px;
+}
+
+table.table004 th {
+  background: #333333;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 92%;
+  color: #FFF;
+}
+
+table.table004 td {
+  background: #E3E3E3;
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+table.table_status {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 100%;
+}
+
+table.table_status caption {
+  margin-top: 1em;
+  text-align: left;
+}
+
+table.table_status th,
+table.table_status td {
+  padding: 4px 6px;
+}
+
+table.table_status th {
+  background: #000000;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 92%;
+  font-color: #FFCC00;
+}
+
+table.table_status td {
+  background: #000000;
+  text-align: right;
+  white-space: nowrap;
+  font-color: #FFCC00;
+}
+/* ページャー------------------- */
+
+
+ul.pager {
+	  list-style:none;
+	  font-size: 15px;
+      margin: 0px;
+}
+ul.pager li {
+	 list-style:none;
+      float: left;
+      margin-right: 5px;
+      border: 1px #666666 solid;
+      font-weight: bold;
+}
+ul.pager li.prev,
+ul.pager li.next {
+	  list-style:none;
+      border: none;
+}
+ul.pager li a {
+	  list-style:none;
+      position: relative;
+      display: block;
+      padding: 3px 8px;
+      color: #666666;
+}
+ul.pager li a:link,
+ul.pager li a:visited {
+	  list-style:none;
+      text-decoration: none;
+}
+ul.pager li a:hover,
+ul.pager li a:active {
+	  list-style:none;
+      background-color: #CCCCCC;
+      text-decoration: none;
+}
+ul.pager li em {
+	  list-style:none;
+      display: block;
+      padding: 3px 8px;
+      background: #666666;
+      color: #FFFFFF;
+}

@@ -1,0 +1,21 @@
+<form action="/cake/town/q6/" name="form" method="post">
+<table width="315" border="0" bgcolor="#FFFFFF">
+  <tr>
+    <td bgcolor="#339999">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><br>
+      ■ラーメンのスープといえばどんなスープ？<br>
+<?php foreach($data as $datas): ?>
+      <input name="data[answer_5]" type="radio" value="<?php echo $datas['parent_material']['parent_material_code']?>" checked><?php echo $datas['parent_material']['parent_material_name']?><br>
+<?php endforeach; ?>
+</td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="Submit2" value="次へ"></td>
+  </tr>
+  <tr>
+    <td height="268">&nbsp;</td>
+  </tr>
+</table>
+</form>

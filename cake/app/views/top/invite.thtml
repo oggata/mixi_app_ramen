@@ -1,0 +1,13 @@
+<script type="text/javascript" charset="UTF-8" src="http://static.mixi.jp/js/application/touch.js"></script>
+<script type="text/javascript">
+
+opensocial.requestShareApp("VIEWER_FRIENDS", null, function(response) {
+  if (response.hadError()) {
+    var errCode = response.getErrorCode();
+    // do something...
+  } else {
+    // do something...
+  }
+});
+
+</script>

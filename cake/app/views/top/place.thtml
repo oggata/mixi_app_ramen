@@ -1,0 +1,32 @@
+<script type="text/javascript" charset="UTF-8" src="http://static.mixi.jp/js/application/touch.js"></script>
+
+<script type="text/javascript">
+
+function showMap(latitude, longitude) {
+  // do_something
+  document.location = "http://ramen.blamestitch.com/cake/top/place_execute/"+latitude+","+longitude;
+}
+
+
+mixi.requestFetchGeolocation(function(response) {
+//alert('aaaaaa');
+  if (response.hadError()) {
+    var errCode = response.getErrorCode();
+    alert('error');
+    alert(response.getErrorMessage());
+  } else {
+    var geo = response.getData();
+    if (typeof(geo) != 'undefined') {
+      geo.getCurrentPosition(function(position) {
+        showMap(position.coords.latitude,position.coords.longitude);
+});
+    } else {
+    alert("Your browser doesn't support geolocation.");
+    }
+  }
+});
+
+
+// -->
+</script>
+

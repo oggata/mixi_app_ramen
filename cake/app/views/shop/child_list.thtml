@@ -1,0 +1,86 @@
+<?php
+function return_wordwrap($line){
+  $n=30; #改行させる（半角での）文字数
+  $rtntxt = '';
+  for($i=0;$i<mb_strlen($line);$i+=$len){
+    for($j=1;$j<=$n;$j++){
+      $wk=mb_substr($line,$i,$j);
+      if(strlen($wk)>=$n) break;
+    }
+    $len=mb_strlen($wk);
+    $rtntxt .= "$wk<br>";
+  }
+  return $rtntxt;
+}
+?>
+<style type="text/css">
+<!--
+.style1 {
+  font-size: 14px;
+  font-weight: bold;
+}
+-->
+</style>
+
+
+<table width="312" border="0" bordercolor="#999999" bgcolor="#FFFFFF" class="table004" cellpadding="0" cellspacing="0">
+  <tr>
+    <th colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="306">
+        <!-- fwtable fwsrc="/jpg/z_menu.png" fwbase="z_menu.gif" fwstyle="Dreamweaver" fwdocid = "76185089" fwnested="0" -->
+        <tr>
+          <td width="76"><a href="/cake/shop/top/item_genre:1/page_no:1"><img name="z_menu_r3_c3" src="/jpg/z_menu_r3_c3.gif" width="76" height="58" border="0" alt=""></a></td>
+          <td width="77"><a href="/cake/shop/top/item_genre:2/page_no:1"><img name="z_menu_r3_c7" src="/jpg/z_menu_r3_c7.gif" width="77" height="58" border="0" alt=""></a></td>
+          <td width="77"><a href="/cake/shop/top/item_genre:3/page_no:1"><img name="z_menu_r3_c10" src="/jpg/z_menu_r3_c10.gif" width="77" height="58" border="0" alt=""></a></td>
+          <td width="76"><a href="/cake/shop/top/item_genre:4/page_no:1"><img name="z_menu_r3_c12" src="/jpg/z_menu_r3_c12.gif" width="76" height="58" border="0" alt=""></a></td>
+        </tr>
+        <tr>
+          <td><img name="z_menu_r5_c3" src="/jpg/z_menu_r5_c3.gif" width="76" height="2" border="0" alt=""></td>
+          <td><img name="z_menu_r5_c7" src="/jpg/z_menu_r5_c7.gif" width="77" height="2" border="0" alt=""></td>
+          <td><img name="z_menu_r5_c10" src="/jpg/z_menu_r5_c10.gif" width="77" height="2" border="0" alt=""></td>
+          <td><img name="z_menu_r5_c12" src="/jpg/z_menu_r5_c12.gif" width="76" height="2" border="0" alt=""></td>
+        </tr>
+        <tr>
+          <td><a href="/cake/shop/top/item_genre:5/page_no:1"><img name="z_menu_r6_c3" src="/jpg/z_menu_r6_c3.gif" width="76" height="58" border="0" alt=""></a></td>
+          <td><a href="/cake/shop/top/item_genre:6/page_no:1"><img name="z_menu_r6_c7" src="/jpg/z_menu_r6_c7.gif" width="77" height="58" border="0" alt=""></a></td>
+          <td><a href="/cake/shop/top/item_genre:7/page_no:1"><img name="z_menu_r6_c10" src="/jpg/z_menu_r6_c10.gif" width="77" height="58" border="0" alt=""></a></td>
+          <td><a href="/cake/shop/top/item_genre:8/page_no:1"><img name="z_menu_r6_c12" src="/jpg/z_menu_r6_c12.gif" width="76" height="58" border="0" alt=""></a></td>
+        </tr>
+        <tr>
+          <td><img name="z_menu_r7_c3" src="/jpg/z_menu_r7_c3.gif" width="76" height="4" border="0" alt=""></td>
+          <td><img name="z_menu_r7_c7" src="/jpg/z_menu_r7_c7.gif" width="77" height="4" border="0" alt=""></td>
+          <td><img name="z_menu_r7_c10" src="/jpg/z_menu_r7_c10.gif" width="77" height="4" border="0" alt=""></td>
+          <td><img name="z_menu_r7_c12" src="/jpg/z_menu_r7_c12.gif" width="76" height="4" border="0" alt=""></td>
+        </tr>
+        </table></th>
+  </tr>
+  <tr>
+    <th colspan="3"><?php echo $vlist;?></th>
+  </tr>
+  <tr>
+    <th width="103">画像</th>
+    <th width="149">名前</th>
+    <th width="46">購入</th>
+  </tr>
+
+   <?php foreach($data as $datas): ?>
+   <form name="form" method="post" action="/cake/shop/buy_confirm/">
+  <tr>
+    <td rowspan="4" background="/img/shop/sara_100.jpg"><img src="/img/material/<?php echo $datas['material']['material_id']?>.png" width="100" height="100"></td>
+    <td><?php echo $datas['material']['material_name']; ?></td>
+    <td rowspan="4"><input type="submit" name="submit" value="購入" <?php if( $money < $datas['material']['shiire_price'] or $level < $datas['material']['lv'] ){ ?>disabled<?php } ?>></td>
+    <input type="hidden" name="data[submit]" value="<?php echo $datas['material']['material_code']?>">
+
+   </tr>
+  <tr>
+    <td><?php echo $datas['material']['comment']; ?></td>
+    </tr>
+  <tr>
+    <td>販売額：<?php echo $datas['material']['price']; ?>銭↑      </td>
+    </tr>
+  <tr>
+    <td><span class="style1">ＬＶ<?php echo $datas['material']['lv']; ?>～<br>
+      仕入金額：<?php echo $datas['material']['shiire_price']; ?>銭</span></td>
+  </tr>
+   </form>
+   <?php endforeach; ?>
+</table>

@@ -1,0 +1,26 @@
+  <table width="933" height="419" border="0">
+    <tr>
+      <td height="59" bgcolor="#FFFFFF"> <br>      <br></td>
+      <td height="59" bgcolor="#FFFFFF"><img src="/jpg/kakunin.jpg" width="500" height="119"></td>
+    </tr>
+    <tr>
+      <td width="84" height="161" bgcolor="#FFFFFF"><img src="/cake/app/webroot/jpg/spacer80.gif" width="80" height="50"></td>
+      <td width="839" bgcolor="#FFFFFF"> <table width="532" border="1" bordercolor="#999999" bgcolor="#FFFFFF" id="table-01">
+          <tr bgcolor="#FFFFFF">
+            <td colspan="2"><img src="/jpg/input.gif" width="400" height="25"></td>
+          </tr>
+          <tr>
+            <td width="108" bgcolor="#F0F0F0">&nbsp;</td>
+            <td width="408"><span class="style1"><?php echo $sub_evo_name ?>
+            </span></td>
+          </tr>
+          <tr>
+            <td bgcolor="#F0F0F0">&nbsp;</td>
+            <td><img src="<?php echo $up_img ?>" width="130" height="119"><br>
+          ※現在ＪＰＧ形式の画像のみ対応しております。 </td></tr>
+
+    </table>              <input name="submit" type="hidden" value="アカウント作成">
+              <input type="image" src="/jpg/kakuningamen_botan.gif">
+        </td>
+    </tr>
+  </table>

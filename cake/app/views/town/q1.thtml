@@ -1,0 +1,27 @@
+<form action="/cake/town/q2/" name="form" method="post">
+<table width="310" height="310" border="0" bgcolor="#FFFFFF">
+  <tr>
+    <td bgcolor="#339999">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><p>これからいくつかの質問に答えて<br>
+          あなたの街の住人が好むラーメンのコンセプトを<br>
+          教えて下さい。<br>
+        </p>
+        <p>■あなたの町のある都道府県を選んでください。<br>
+          <select name="data[answer_1]">
+		  <?php foreach($mpt as $mpts): ?>
+            <option value="<?php echo $mpts['m_prefecture']['prefecture_code'] ?>"><?php echo $mpts['m_prefecture']['prefecture_name'] ?></option>
+			 <?php endforeach; ?>
+          </select>
+        </p>
+</td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="Submit2" value="次へ"></td>
+  </tr>
+  <tr>
+    <td height="134">&nbsp;</td>
+  </tr>
+</table>
+</form>

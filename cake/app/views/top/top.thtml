@@ -1,0 +1,306 @@
+<script type="text/javascript" src="/js/jquery.alerts-1.1/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.alerts-1.1/jquery.alerts.js"></script>
+<script type="text/javascript" src="/js/jquery.alerts-1.1/jquery.ui.draggable.js"></script>
+<link rel="stylesheet" href="/js/jquery.alerts-1.1/jquery.alerts.css" type="text/css" />
+
+<script language="javascript">
+<!-- //
+function submitForm() {
+document.formname.send.disabled = true;
+submitForm = disableButtons();
+document.formname.submit();
+return false;
+}
+function disableButtons() {
+//alert('処理中です。しばらくお待ち下さい。');
+return false;
+}
+// -->
+</script>
+
+
+<script type="text/javascript">
+<!--
+function DisableButton(b){
+b.disabled = true;
+b.value = "屋台移動中";
+b.form.submit();
+}
+// -->
+</script>
+<script language="JavaScript"><!--
+myOP = window.opera;            // OP
+myN6 = document.getElementById; // N6
+myIE = document.all;            // IE
+myN4 = document.layers;         // N4
+if      (myOP) myBR="N6"; // ブラウザは OP6以上
+else if (myIE) myBR="I4"; // ブラウザは IE4以上
+else if (myN6) myBR="N6"; // ブラウザは NS6以上
+else if (myN4) myBR="N4"; // ブラウザは NN4
+else           myBR="";   // ブラウザは 分からん
+function myBrowserObj(myID){ // 使用中のブラウザの取得
+  if (myBR=="N6") myRet=document.getElementById(myID).style;
+  else if (myBR=="I4") myRet=document.all[myID].style;
+  else if (myBR=="N4") myRet=document[myID];
+  else myRet=0;
+  return myRet;
+}
+function myDisp(myID,myVisibility){  // コメント窓 表示/非表示
+   myObj = myBrowserObj(myID);       // 使用中のブラウザオブジェクト
+   if(myObj){                           // ブラウザ対応？
+      myObj.visibility = myVisibility;  // 表示/非表示
+   }
+   return true;
+}
+function myIn( myID ) {        // カーソルが乗った
+  myDisp(myID,"visible");      // 表示
+}
+function myOut( myID ) {       // カーソルが離れた
+  myDisp(myID,"hidden");       // 非表示
+}
+// --></script>
+
+
+<script type="text/javascript">
+<!--
+<?php echo $alert_txt ?>
+// -->
+</script>
+<script type="text/javascript">
+<!--
+
+
+var Timer1; //タイマーを格納する変数（タイマーID）の宣言
+
+
+//カウントダウン関数を1000ミリ秒毎に呼び出す関数
+function Start()
+{
+  document.timer.elements[0].value="<?php echo $target_minute;?>";
+  document.timer.elements[1].value="<?php echo $target_second;?>";
+  document.timer.elements[2].disabled=true;
+  Timer1=setInterval("CountDown()",1000);
+}
+
+//タイマー停止関数
+function Stop()
+{
+  document.timer.elements[2].disabled=false;
+  clearInterval(Timer1);
+}
+
+//カウントダウン関数
+function CountDown()
+{
+  var min=document.timer.elements[0].value;
+  var sec=document.timer.elements[1].value;
+
+  if( (min=="") && (sec=="") )
+  {
+    alert("時刻を設定してください！");
+    ReSet();
+  }
+  else
+  {
+    try
+    {
+      if (min=="") min=0;
+      min=eval(min);
+
+     if (sec=="") sec=0;
+      sec=eval(sec);
+
+      TMWrite(min*60+sec-1);
+    }
+    catch(e)
+    {
+      //alert("数値を記入して下さい！");
+      ReSet();
+    }
+  }
+}
+
+//残り時間を書き出す関数
+function TMWrite(int)
+{
+  int=eval(int);
+
+  if (int<=0)
+  {
+    ReSet();
+    //alert("時間です！");
+  }
+  else
+  {
+    //残り分数はintを60で割って切り捨てる
+    document.timer.elements[0].value=Math.floor(int/60);
+    //残り秒数はintを60で割った余り
+    document.timer.elements[1].value=int % 60;
+
+  //表示用
+    var view_minutes = Math.floor(int/60);
+  document.getElementById("ViewMinutes").innerHTML = view_minutes;
+  //表示用
+    var view_seconds = int % 60;
+  document.getElementById("ViewSeconds").innerHTML = view_seconds;
+
+
+  }
+}
+
+//フォームを初期状態に戻す（リセット）関数
+function ReSet()
+{
+  document.timer.elements[0].value="0";
+  document.timer.elements[1].value="0";
+  document.timer.elements[2].disabled=false;
+  clearInterval(Timer1);
+}
+
+// -->
+</script>
+
+
+
+<style type="text/css">
+<!--
+.style3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FF0000;
+}
+.style4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+-->
+</style>
+<form name="timer">
+<input type="hidden" value="">
+<input type="hidden" value="">
+<input type="hidden" value="">
+</form>
+<table width="320" border="0" bgcolor="#000000" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="314"><img src="<?php echo $top_img ?>" width="310" height="350"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#000000">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+
+      <table width="226" height="21" border="0">
+        <tr>
+          <td width="141"><div class="style3">次の屋台移動可能まで</div>
+          </td>
+          <td width="20"><div class="style3" id="ViewMinutes">00</div></td>
+          <td width="20" class="style3">分</td>
+          <td width="20"><div class="style3" id="ViewSeconds">00</div></td>
+          <td width="20" class="style3">秒</td>
+        </tr>
+        <tr>
+          <td colspan="5"><form action="/cake/xi/doaction/" name="form" method="post">
+
+      <?php if($bottan_effect_flag == 1){?>
+      <input type="image" src="/jpg/exe_bottan.png" name="button1" alt="実行ボタン" onClick="DisableButton(this)">
+      <?php }else{ ?>
+      <img src="/jpg/exe_no_bottan.png"><?php } ?>
+</form></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td>
+
+    </td></tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td bgcolor="#D1883F"><a href="/cake/top/message/"><img src="/jpg/whatsnew.png" width="310" height="30" border="0"></a></td>
+  </tr>
+  <tr>
+    <td><textarea name="textarea" cols="37" rows="7" readonly>
+<?php foreach($m_data as $m_datas): ?>
+<?php echo $m_datas['member_message']['message_txt'] ?>
+(<?php echo $m_datas['member_message']['message_accept_date'] ?>)
+&#x0D;&#x0A;
+<?php endforeach; ?>
+    </textarea>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#C77E37"><a href="/cake/town/sales_rank"><img src="/jpg/idourireki.png" width="310" height="30" border="0"></a></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="310" border="0" bgcolor="#FFFFFF">
+
+<?php foreach($data as $datas): ?>
+  <tr>
+    <td width="44"><img src="<?php echo $datas['members']['thumnail_url']?>" width="44" height="48"></td>
+    <td width="10" rowspan="2"><img src="/img/human/fukidashi.png" width="10" height="40"></td>
+    <td width="181" rowspan="2" bgcolor="#CCCCCC">販売数：<?php echo $datas['sales_history']['sales_count']?>杯<br>
+満足度：<?php echo $datas['sales_history']['max_point']?>点<br>
+最終更新日：<?php echo $datas['sales_history']['last_visited_date']?></td>
+  </tr>
+  <tr>
+    <td><?php echo $datas['members']['member_name']?>町</td>
+  </tr>
+  <tr>
+    <td colspan="3">↑</td>
+    </tr>
+<?php endforeach; ?>
+</table>	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#D38F35"><a href="/cake/tyouri/top"><img src="/jpg/hyouban.png" width="310" height="30" border="0"></a></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="314" border="0">
+    <?php foreach($hyouka as $hyoukas): ?>
+        <tr>
+          <td width="48"><img src="/img/human/<?php echo $hyoukas['member_town_valuation']['town_human_code']?>.png" width="48" height="48">
+          (<?php echo $hyoukas['members']['member_name']?>町民)</td>
+          <td width="10"><img src="/img/human/fukidashi.png" width="10" height="40"></td>
+          <td width="243" bgcolor="#CCCCCC"><?php echo $hyoukas['member_town_valuation']['title']?><br>
+(<?php echo $hyoukas['member_town_valuation']['decision_date']?>)</td>
+        </tr>
+    <?php endforeach; ?>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><p><img src="spacer.gif" width="1" height="50"></p></td>
+  </tr>
+</table>
+<DIV id="AlertView" style="position:absolute; left:5px;
+ top:200px; width:280px; height:250px; z-index:1; visibility:hidden"; filter:Alpha(opacity=60);>
+  <TABLE border="1" cellpadding="6" cellspacing="0" width="280" height="250">
+    <TBODY>
+      <TR>
+        <TD bgcolor="<?php echo $div_color; ?>"><span class="style4"><FONT color="#FFFFFF"><BR>
+              <img src="<?php echo $div_img_url; ?>"></FONT></span>
+          <hr>
+          <FONT color="#FFFFFF">&nbsp;          </FONT>
+          <span class="style4"><FONT color="#FFFFFF"><?php echo $div_message_1; ?></FONT></span>          <hr>
+          <FONT color="#FFFFFF"; font-size:16px;><?php echo $div_message_2; ?>
+          <BR>
+          </FONT>
+        <input type="submit" name="Submit" value="確認しました" onclick="myOut('AlertView')">        </TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+</DIV>
+
+<DIV id="NoAlertView" visibility:hidden">
+</DIV>
+<script>
+window.onload=function(){
+Start();
+myIn('<?php echo $div_template; ?>');
+}
+</script>

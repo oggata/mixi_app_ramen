@@ -1,0 +1,129 @@
+<style type="text/css">
+<!--
+.style1 {	font-size: 16px;
+  font-weight: bold;
+}
+-->
+</style>
+<table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="300" bgcolor="#FFFFFF">  <table width="300" border="0" background="/jpg/haikei.gif">
+        <tr>
+          <td width="286"><table border="0">
+            <tr>
+              <td colspan="3"><div align="center"> <img src="/jpg/spacer.gif" width="280" height="1"></div></td>
+              </tr>
+            <tr>
+              <td colspan="3"><img src="/jpg/spacer.gif" width="1" height="70"></td>
+            </tr>
+            <tr>
+              <td width="32">&nbsp;</td>
+              <td width="259"><img src="/top_img/top/<?php echo $member_code;?>/<?php echo $main_product_code;?>.png?<?php echo $time_txt; ?>" width="220" height="220"></td>
+              <td width="1">&nbsp;</td>
+            </tr>
+          </table>          </td>
+        </tr>
+      </table>      <table width="295" border="0">
+        <tr>
+          <td width="105" bgcolor="#CCCCCC">アイコン</td>
+          <td width="180"><img src="<?php echo $thumnail_url; ?>" width="84"></td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">名前</td>
+          <td width="180"><?php echo $member_name; ?></td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">称号</td>
+          <td><?php echo $lv_comment; ?></td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">順位</td>
+          <td><?php echo $rank_txt; ?>位</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">レシピ数</td>
+          <td><?php echo $recipi_count; ?>種類</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">本日の販売皿</td>
+          <td><?php echo $todays_sales_product_count; ?>杯</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">累計の販売皿</td>
+          <td><?php echo $sales_product_count; ?>杯</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">所持金額</td>
+          <td><?php echo $money; ?>銭</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">経験値</td>
+          <td><?php echo $sum_exp; ?>Exp</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">次のレベルまで残り経験値</td>
+          <td><?php echo $least_next_exp; ?>Exp</td>
+        </tr>
+        <tr>
+          <td bgcolor="#CCCCCC">訪問した町の数</td>
+          <td><?php echo $visited_town_count; ?></td>
+        </tr>
+      </table>      <table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="288" bgcolor="#FF6600" class="style1">レシピ一覧</td>
+        </tr>
+      </table>      <table width="296" border="0" bgcolor="#FFFFFF">
+        <tr>
+          <td width="290"><?php echo $vlist;?></td>
+        </tr>
+      </table>      <table width="300" border="0" bordercolor="#333333" bgcolor="#FFFFFF" class="table-01" cellpadding="0" cellspacing="0">
+        <tr>
+          <?php $q = 1;?>
+          <?php foreach($data as $datas): ?>
+          <td width="291"><img src="/top_img/top/<?php echo $datas['product']['member_code'];?>/<?php echo $datas['product']['product_code'];?>.png?<?php echo $time_txt;?>" width="85" height="85"><br>
+            <table width="85" border="0" bordercolor="#666666" >
+              <tr>
+                <td width="115" bgcolor="#CCCCCC">値段</td>
+              </tr>
+              <tr>
+                <td><?php echo $datas['product']['product_price'];?>銭</td>
+              </tr>
+              <tr>
+                <td bgcolor="#CCCCCC">スープ</td>
+              </tr>
+              <tr>
+                <td height="21"><?php echo $datas['product']['c_2_name'];?></td>
+              </tr>
+              <tr>
+                <td bgcolor="#CCCCCC">麺</td>
+              </tr>
+              <tr>
+                <td><?php echo $datas['product']['c_3_name'];?></td>
+              </tr>
+              <tr>
+                <td bgcolor="#CCCCCC">こってり度</td>
+              </tr>
+              <tr>
+                <td><span class="StarColor">
+                  <?php for($i=0;$i<$datas['product']['product_kotteri_point'];$i++){echo '★';}?>
+                  (<?php echo $datas['product']['product_kotteri_point'];?>)</span></td>
+              </tr>
+              <tr>
+                <td bgcolor="#CCCCCC">ボリューム</td>
+              </tr>
+              <tr>
+                <td><span class="StarColor">
+                  <?php for($i=0;$i<$datas['product']['product_volume_point'];$i++){echo '★';}?>
+                  (<?php echo $datas['product']['product_volume_point'];?>)</span></td>
+              </tr>
+          </table>          </td>
+          <?php if($q%3==0){ ?>
+        </tr>
+        <tr>
+          <?php } ?>
+          <?php $q = $q + 1;?>
+          <?php endforeach; ?>
+        </tr>
+    </table></td>
+  </tr>
+</table>

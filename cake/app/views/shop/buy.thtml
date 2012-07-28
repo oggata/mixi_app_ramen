@@ -1,0 +1,52 @@
+<table width="310" border="0" bgcolor="#FFFFD2">
+  <tr>
+    <td width="19">&nbsp;</td>
+    <td width="697">&nbsp;</td>
+    <td width="17">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td bgcolor="#FFFF97"><H2>購入完了しました。</H2></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td bgcolor="#FFFF97"><?php foreach($data as $datas): ?>
+      <table width="290" height="30" border="0">
+        <tr bgcolor="#999999">
+          <td width="79">画像</td>
+          <td width="103">名称</td>
+          <td width="174">価格</td>
+        </tr>
+        <tr>
+          <td background="/img/shop/sara_100.jpg"><img src="/img/material/<?php echo $datas['material']['material_id']?>.png" width="100" height="100"></td>
+          <td width="103"><?php echo $datas['material']['material_name']?></td>
+          <td width="174"><?php echo $datas['material']['price']?></td>
+        </tr>
+      </table>
+    <?php endforeach; ?></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td bgcolor="#FFFF97"><a href="/cake/shop/top/material_genre:1/page_no:1">他の食材も見る</a><br>
+    <br>
+    <a href="/cake/tyouri/top/page_no:1">調理場へ行く</a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>

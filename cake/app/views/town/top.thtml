@@ -1,0 +1,103 @@
+<style type="text/css">
+<!--
+.style1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+-->
+</style>
+<table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="300"><img src="/jpg/mymap.png" width="300" height="150"></td>
+  </tr>
+  <tr>
+    <td><span class="style1">
+      <div align="left"><img src="/jpg/bestrecipi.png" width="300" height="30"><br>
+          <a href="/cake/town/q1/">町を作り直す</a></div></td>
+  </tr>
+  <tr>
+    <td>
+
+<?php foreach($mptd as $mptds): ?>
+    <table width="283" border="0" bordercolor="#999999">
+      <tr>
+        <td width="90" bgcolor="#FF9999">まちの名前</td>
+        <td width="210"><?php echo $mptds['members']['member_name'];?></td>
+      </tr>
+       <tr>
+        <td width="90" bgcolor="#FF9999">県名</td>
+        <td width="210"><?php echo $mptds['m_prefecture']['prefecture_name'];?></td>
+      </tr>
+      <tr>
+        <td width="90" bgcolor="#FF9999">好みのスープ</td>
+        <td width="210"><?php echo $mptds['member_town_taste']['goal_soup_type_name'];?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FF9999">好みの麺</td>
+        <td><?php echo $mptds['member_town_taste']['goal_men_type_name'];?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FF9999">価格帯</td>
+        <td><?php echo $mptds['member_town_taste']['goal_product_price'];?>円前後</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FF9999">ボリューム</td>
+        <td><?php echo $mptds['member_town_taste']['goal_volume_point'];?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FF9999">こってり度</td>
+        <td><?php echo $mptds['member_town_taste']['goal_kotteri_point'];?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FF9999">必須の具材１</td>
+        <td><?php echo $mptds['member_town_taste']['hissu_material_name1'];?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FF9999"> 必須の具材２</td>
+        <td><?php echo $mptds['member_town_taste']['hissu_material_name2'];?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FF9999">必須の具材３</td>
+        <td><?php echo $mptds['member_town_taste']['hissu_material_name3'];?></td>
+      </tr>
+    </table>
+<?php endforeach; ?>
+
+
+    </td>
+  </tr>
+  <tr>
+    <td><img src="/jpg/raihousya.png" width="300" height="30"></td>
+  </tr>
+  <tr>
+    <td height="307"><table width="300" border="0">
+
+<?php foreach($visited_list as $visited_lists): ?>
+      <tr>
+        <td width="100" rowspan="4"><img src="/top_img/top/<?php echo $visited_lists['members']['member_code']?>/<?php echo $visited_lists['members']['main_product_code']?>.png" width="100" height="113"></td>
+        <td width="130"><img src="<?php echo $visited_lists['members']['thumnail_url']?>" width="50"><?php echo $visited_lists['members']['member_name']?>さん<br>          </td>
+        <td width="71" rowspan="4"><?php if($visited_lists['sales_history']['hyoka_flag'] == 0){ ?><a href="/cake/town/hyoka/<?php echo $visited_lists['sales_history']['sales_history_code']?>">評価する</a><?php }else{ ?>評価済<?php } ?></td>
+      </tr>
+      <tr>
+        <td>最高得点<?php echo $visited_lists['sales_history']['max_point']?>点</td>
+      </tr>
+      <tr>
+        <td><?php echo $visited_lists['sales_history']['sales_count']?>杯</td>
+      </tr>
+      <tr>
+        <td>日付：<?php echo $visited_lists['sales_history']['last_visited_date']?></td>
+      </tr>
+      <tr>
+        <td colspan="3"><hr></td>
+        </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+        </tr>
+ <?php endforeach; ?>
+
+
+
+    </table></td>
+  </tr>
+</table>
+

@@ -1,0 +1,85 @@
+<style type="text/css">
+<!--
+.style1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+-->
+</style>
+<table width="309" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr bgcolor="#FF6600">
+    <td colspan="2"><div align="left" class="style1">販売中メニュー</div></td>
+  </tr>
+  <tr>
+    <td width="181"><img src="/top_img/top/<?php echo $member_code?>/<?php echo $main_product_code?>.png?<?php echo $now_time;?>" width="180" height="180"></td>
+    <td width="118"><table width="118" border="0">
+      <tr>
+        <td width="112" bgcolor="#CCCCCC">値段</td>
+      </tr>
+      <tr>
+        <td><?php echo $product_price;?>銭</td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC">スープ</td>
+      </tr>
+      <tr>
+        <td><?php echo $c_2_name;?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC">麺</td>
+      </tr>
+      <tr>
+        <td><?php echo $c_3_name;?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC">あっさり&lt;-&gt;こってり</td>
+      </tr>
+      <tr>
+        <td><span class="StarColor"><?php for($i=0;$i<$product_kotteri_point;$i++){echo '★';}?>(<?php echo $product_kotteri_point;?>)</span></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC">ボリューム</td>
+      </tr>
+      <tr>
+        <td><span class="StarColor"><?php for($i=0;$i<$product_volume_point;$i++){echo '★';}?>(<?php echo $product_volume_point;?>)</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2"><a href="/cake/tyouri/detail/<?php echo $main_product_code?>"><img src="/jpg/tyouri.png" width="129" height="36"></a>    </td>
+  </tr>
+  <tr bgcolor="#FF6600">
+    <td colspan="2" class="style1">まちの人の評価</td>
+  </tr>
+  <tr>
+    <td colspan="2">本日の売上数　</td>
+  </tr>
+  <tr>
+    <td colspan="2">　　　　　　　<?php echo $todays_sales_product_count;?>杯</td>
+  </tr>
+  <tr>
+    <td colspan="2">開業からの累計売上数</td>
+  </tr>
+  <tr>
+    <td colspan="2">　　　　　　　<?php echo $sales_product_count;?>杯</td>
+  </tr>
+  <tr bgcolor="#FF6600">
+    <td colspan="2" class="style1"><?php echo $map_name;?>町での評価</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="299" border="0">
+    <?php foreach($hyouka as $hyoukas): ?>
+        <tr>
+          <td width="48"><img src="/img/human/<?php echo $hyoukas['member_town_valuation']['town_human_code']?>.png" width="48" height="48">
+          (<?php echo $hyoukas['members']['member_name']?>町民)</td>
+          <td width="10"><img src="/img/human/fukidashi.png" width="10" height="40"></td>
+          <td width="243" bgcolor="#CCCCCC"><?php echo $hyoukas['member_town_valuation']['title']?><br>
+(<?php echo $hyoukas['member_town_valuation']['decision_date']?>)</td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+    <?php endforeach; ?>
+    </table></td>
+  </tr>
+</table>

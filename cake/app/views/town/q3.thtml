@@ -1,0 +1,34 @@
+<form action="/cake/town/q4/" name="form" method="post">
+
+<table width="310" border="0" bgcolor="#FFFFFF">
+  <tr>
+    <td bgcolor="#339999">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><br>
+■トッピングについて教えて下さい<br>
+<input name="data[answer_3]" type="radio" value="1" checked>シンプルに麺とスープの味を楽しみたい派。
+<br>
+<input name="data[answer_3]" type="radio" value="2">具は１、２品入ってれば良い
+<br>
+<input name="data[answer_3]" type="radio" value="3">バランスよく具材の入ったラーメンが好きだ
+<br>
+<input name="data[answer_3]" type="radio" value="4">ボリュームのあるチャーシュー麺が好きだ
+<br>
+<input name="data[answer_3]" type="radio" value="5">
+ラーメンを注文するときのトッピングは「全部のせ！
+<p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="Submit2" value="次へ"></td>
+  </tr>
+  <tr>
+    <td height="175">&nbsp;</td>
+  </tr>
+</table>
+
+
+
+
+</form>
+

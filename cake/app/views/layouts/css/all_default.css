@@ -1,0 +1,30 @@
+body {
+    font-size: 12px;
+    color:#FFFFFF;
+}
+table {
+    font-size: 12px;
+    color:#FFFFFF;
+}
+
+
+/* �����N ------------------------------------*/
+A:link {
+	color: #FFFF00;
+	text-decoration: none
+}
+/* ��Ɍ��������N */
+A:visited {
+  color: #FFFF00;
+  text-decoration: none     /* ��������� */
+}
+/* �J�[�\������ɂ��鎞�̃����N */
+A:active {
+	color: #FFFF00;
+	text-decoration: underline�G
+}
+/* �N���b�N�����Ƃ��̃����N */
+A:hover {
+  color: #FFFF00;
+  text-decoration: underline;     /* ��������� */
+}

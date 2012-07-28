@@ -1,0 +1,102 @@
+<style type="text/css">
+<!--
+.style1 {
+  font-size: 14px;
+  color: #FF0000;
+  font-weight: bold;
+}
+.style2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+-->
+</style>
+<table width="310" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="15" bgcolor="#FF9900" class="style2">商品</td>
+  </tr>
+</table>
+<table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="178" height="10"><img src="<?php echo $product_path;?>" width="180" height="180"></td>
+    <td width="127" height="10"><table width="98" border="0">
+      <tr>
+        <td width="92" bgcolor="#CCCCCC">値段</td>
+      </tr>
+      <tr>
+        <td><?php echo $product_price;?>銭</td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC">スープ</td>
+      </tr>
+      <tr>
+        <td><?php echo $product_soup_type_name;?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC">麺</td>
+      </tr>
+      <tr>
+        <td><?php echo $product_men_type_name;?></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC">濃さ</td>
+      </tr>
+      <tr>
+        <td><span class="StarColor">
+          <?php for($i=0;$i<$product_kotteri_point;$i++){echo '★';}?>
+      (<?php echo $product_kotteri_point;?>)</span></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC">ボリューム</td>
+      </tr>
+      <tr>
+        <td><span class="StarColor">
+          <?php for($i=0;$i<$product_volume_point;$i++){echo '★';}?>
+      (<?php echo $product_volume_point;?>)</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;    </td>
+  </tr>
+</table>
+
+
+<table width="310" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#FF9900"><span class="style2">材料一覧</span></td>
+  </tr>
+</table>
+<?php if(count($data)==0){?>
+<table width="310" height="93" border="0" bgcolor="#FFFFFF"  cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="15">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF99CC"><span class="style1">お知らせ：<br>
+    料理するための材料が何もありません。<br>
+    お店で材料を購入しましょう！</span></td>
+  </tr>
+</table>
+<?php }?>
+<table width="310" border="0" bordercolor="#FFFFFF" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+<a href="/cake/shop/top/">材料を仕入れに行く</a>
+<br>
+<table width="310" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr bgcolor="#CCCCCC">
+    <td width="102">画像</td>
+    <td width="91">名前</td>
+    <td width="40">価格</td>
+    <td width="45">&nbsp;</td>
+  </tr><?php foreach($data as $datas): ?>
+  <tr>
+    <td background="/img/shop/sara_100.jpg"><img src="/img/material/<?php echo $datas['material']['material_id']?>.png" width="100" height="100"></td>
+    <td><?php echo $datas['material']['material_name'] ?></td>
+    <td><?php echo $datas['material']['price'] ?></td>
+    <td><a href="/cake/tyouri/update_detail/product_code:<?php echo $product_code; ?>/genre_code:<?php echo $genre_code; ?>/material_code:<?php echo $datas['material']['material_code']?>/member_material_code:<?php echo $datas['member_material']['member_material_code'] ?>/">混ぜる</a></td>
+  </tr><?php endforeach; ?>
+</table></td>
+  </tr>
+</table>

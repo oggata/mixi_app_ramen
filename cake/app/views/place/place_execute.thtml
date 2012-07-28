@@ -1,0 +1,12 @@
+<table width="315" border="0" bgcolor="#FFFFFF">
+  <tr>
+    <td height="28"><a href="/cake/place/place_list/">都道府県リスト</a></td>
+  </tr>
+  <tr>
+    <td height="42"><?php echo $message_txt;?><br>
+    <img src="/img/fuda/<?php echo $fuda_no;?>.jpg" width="80" height="30"></td>
+  </tr>
+  <tr>
+    <td height="165">&nbsp;</td>
+  </tr>
+</table>

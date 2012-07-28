@@ -1,0 +1,40 @@
+<?php
+function return_wordwrap($line){
+  $n=15; #改行させる（半角での）文字数
+  $rtntxt = '';
+  for($i=0;$i<mb_strlen($line);$i+=$len){
+    for($j=1;$j<=$n;$j++){
+      $wk=mb_substr($line,$i,$j);
+      if(strlen($wk)>=$n) break;
+    }
+    $len=mb_strlen($wk);
+    $rtntxt .= "$wk<br>";
+  }
+  return $rtntxt;
+}
+?>
+<table width="310" height="127" border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="310"><table width="310" border="0" class="table004" cellpadding="0" cellspacing="0">
+      <tr bgcolor="#FF6600">
+        <th width="71" height="19">名前 </th>
+        <th width="63">販売中</th>
+        <th width="75">本日の売上</th>
+        <th width="69">累計売上</th>
+      </tr>
+      <?php foreach($data as $datas): ?>
+      <tr>
+        <td><a href="/cake/ranking/member_detail/member_code:<?php echo $datas['members']['member_code'] ?>/page_no:1"><img src="<?php echo $datas['members']['thumnail_url'] ?>" width="30"></a><a href="/cake/ranking/member_detail/member_code:<?php echo $datas['members']['member_code'] ?>/page_no:1"><br>
+          <?php echo return_wordwrap($datas['members']['member_name']) ?>(<?php echo return_wordwrap($datas['members']['lv_comment']) ?>)</a><br>          </td>
+        <td><img src="/top_img/top/<?php echo $datas['members']['member_code'] ?>/<?php echo $datas['members']['main_product_code'] ?>.png" width="53" height="53"></td>
+        <td><?php echo $datas['members']['todays_sales_product_count'] ?>杯</td>
+        <td><?php echo $datas['members']['sales_product_count'] ?>杯</td>
+      </tr>
+      <tr>
+        <td colspan="4"><hr></td>
+        </tr>
+      <?php endforeach; ?>
+    </table></td>
+  </tr>
+</table>
+
